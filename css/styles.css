@@ -561,10 +561,14 @@ a:hover { color: var(--brand-red); }
 
 @media (max-width: 720px) {
   .nav-toggle { display: inline-flex; }
-  .nav-wrap { justify-content: flex-end; }
+  .nav-wrap {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
   .site-nav {
     display: none;
     width: 100%;
+    flex-basis: 100%;
     flex-direction: column;
     align-items: stretch;
     gap: 0.35rem;
