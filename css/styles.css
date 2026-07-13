@@ -53,24 +53,9 @@ a:hover { color: var(--brand-red); }
   padding: 0.85rem 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
   min-height: 5.5rem;
-}
-
-.brand-lockup {
-  display: inline-flex;
-  text-decoration: none;
-  flex-shrink: 0;
-  padding: 0.2rem;
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 0.5rem;
-}
-
-.brand-lockup img {
-  width: min(168px, 42vw);
-  height: auto;
-  display: block;
 }
 
 .nav-toggle {
