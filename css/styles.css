@@ -188,6 +188,22 @@ a:hover { color: var(--brand-red); }
 
 .feature-pair .page-feature { margin: 0; }
 
+.hunt-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.hunt-block {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.hunt-block .page-feature {
+  margin: 0;
+}
+
 .hero {
   position: relative;
   min-height: 64vh;
@@ -556,7 +572,8 @@ a:hover { color: var(--brand-red); }
   .rate-grid,
   .contact-grid,
   .facts,
-  .feature-pair { grid-template-columns: 1fr; }
+  .feature-pair,
+  .hunt-blocks { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
