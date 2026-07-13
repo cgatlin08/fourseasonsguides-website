@@ -33,18 +33,14 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: var(--lake); text-underline-offset: 0.18em; }
 a:hover { color: var(--brand-red); }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: var(--ink);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+.top-banner {
+  background: #1a150e;
+  line-height: 0;
 }
 
 .header-banner {
   display: block;
   line-height: 0;
-  background: #1a150e;
 }
 
 .header-banner img {
@@ -53,15 +49,22 @@ a:hover { color: var(--brand-red); }
   display: block;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--ink);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
 .nav-wrap {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0.55rem 1.25rem;
+  padding: 0.45rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: var(--ink);
 }
 
 .nav-toggle {
@@ -101,7 +104,7 @@ a:hover { color: var(--brand-red); }
 
 .hero {
   position: relative;
-  min-height: 78vh;
+  min-height: 58vh;
   display: grid;
   align-items: end;
   color: white;
@@ -134,7 +137,7 @@ a:hover { color: var(--brand-red); }
   max-width: 1180px;
   width: 100%;
   margin: 0 auto;
-  padding: 5rem 1.25rem 4rem;
+  padding: 2.25rem 1.25rem 2.5rem;
   animation: rise 0.9s ease both;
 }
 
@@ -194,7 +197,7 @@ a:hover { color: var(--brand-red); }
 .section {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 4.75rem 1.25rem;
+  padding: 3.5rem 1.25rem;
 }
 
 .band { background: var(--mist); }
@@ -219,7 +222,7 @@ a:hover { color: var(--brand-red); }
 .page-hero {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 3.5rem 1.25rem 1.25rem;
+  padding: 2.25rem 1.25rem 0.75rem;
 }
 
 .prose p { margin: 0 0 1.1rem; color: var(--ink-soft); }
@@ -333,6 +336,11 @@ a:hover { color: var(--brand-red); }
   color: white;
 }
 
+.contact-band .section {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
 .contact-band .section-head h2 { color: white; }
 .contact-band .section-head p { color: rgba(255, 255, 255, 0.75); }
 
@@ -368,7 +376,7 @@ a:hover { color: var(--brand-red); }
 .site-footer {
   background: var(--ink);
   color: rgba(255, 255, 255, 0.7);
-  padding: 2rem 1.25rem;
+  padding: 1.35rem 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -383,7 +391,7 @@ a:hover { color: var(--brand-red); }
 }
 
 .footer-brand img {
-  width: min(150px, 50vw);
+  width: min(110px, 42vw);
   height: auto;
 }
 
@@ -434,7 +442,7 @@ a:hover { color: var(--brand-red); }
   }
   .site-nav.is-open { display: flex; }
   .site-nav a { border-radius: 0.55rem; text-align: center; }
-  .nav-wrap { flex-wrap: wrap; }
   .footer-meta { text-align: left; }
-  .hero-inner { padding: 3.5rem 1.15rem 3rem; }
+  .hero-inner { padding: 1.75rem 1.15rem 2rem; }
+  .hero { min-height: 52vh; }
 }
