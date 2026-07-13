@@ -253,7 +253,7 @@ a:hover { color: var(--brand-red); }
 
 .card-grid { grid-template-columns: repeat(3, 1fr); }
 .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-.rate-grid { grid-template-columns: repeat(3, 1fr); }
+.rate-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 
 .card {
   background: white;
