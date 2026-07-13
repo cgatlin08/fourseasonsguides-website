@@ -110,7 +110,7 @@ a:hover { color: var(--brand-red); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 18%;
   animation: slow-zoom 18s ease-out forwards;
 }
 
