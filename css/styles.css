@@ -37,25 +37,31 @@ a:hover { color: var(--brand-red); }
   position: sticky;
   top: 0;
   z-index: 40;
-  background-color: #1a150e;
-  background-image:
-    linear-gradient(180deg, rgba(13, 20, 24, 0.55) 0%, rgba(13, 20, 24, 0.72) 100%),
-    url("../images/brand/Four-Seasons-Banner-Lake-copy.png");
-  background-size: cover;
-  background-position: center 42%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--ink);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.header-banner {
+  display: block;
+  line-height: 0;
+  background: #1a150e;
+}
+
+.header-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .nav-wrap {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0.85rem 1.25rem;
+  padding: 0.55rem 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem;
-  min-height: 5.5rem;
+  background: var(--ink);
 }
 
 .nav-toggle {
@@ -73,19 +79,17 @@ a:hover { color: var(--brand-red); }
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 0.35rem;
+  gap: 0.25rem;
   align-items: center;
-  padding: 0.35rem;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 999px;
+  justify-content: center;
 }
 
 .site-nav a {
   color: rgba(255, 255, 255, 0.92);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 700;
-  padding: 0.45rem 0.8rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 999px;
 }
 
@@ -419,24 +423,18 @@ a:hover { color: var(--brand-red); }
 
 @media (max-width: 720px) {
   .nav-toggle { display: inline-flex; }
+  .nav-wrap { justify-content: flex-end; }
   .site-nav {
     display: none;
     width: 100%;
     flex-direction: column;
     align-items: stretch;
     gap: 0.35rem;
-    padding: 0.5rem;
-    border-radius: 0.85rem;
+    padding: 0.35rem 0 0.15rem;
   }
   .site-nav.is-open { display: flex; }
-  .site-nav a { border-radius: 0.55rem; }
-  .nav-wrap {
-    flex-wrap: wrap;
-    min-height: 0;
-  }
-  .site-header {
-    background-position: center 48%;
-  }
+  .site-nav a { border-radius: 0.55rem; text-align: center; }
+  .nav-wrap { flex-wrap: wrap; }
   .footer-meta { text-align: left; }
   .hero-inner { padding: 3.5rem 1.15rem 3rem; }
 }
