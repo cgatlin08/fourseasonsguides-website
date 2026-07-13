@@ -337,6 +337,48 @@ a:hover { color: var(--brand-red); }
   color: white;
 }
 
+.map-frame {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--mist);
+  min-height: 360px;
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 380px;
+  border: 0;
+}
+
+.partner-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.partner-link {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 0.65rem;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 1px solid var(--line);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  color: inherit;
+}
+
+.partner-link img {
+  width: min(280px, 70vw);
+  height: auto;
+}
+
 .contact-band .section {
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
