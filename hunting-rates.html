@@ -10,24 +10,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  
 </head>
 <body>
-    <div class="top-banner">
+  <div class="top-banner">
     <a class="header-banner" href="index.html" aria-label="Four Seasons Guide Service home">
       <img src="images/brand/Four-Seasons-Banner-Lake-copy.png" alt="Four Seasons Guide Service — Lake Texoma striper fishing, Red River, trophy bluecats, and duck hunting" />
     </a>
   </div>
   <header class="site-header">
     <div class="nav-wrap">
-
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
-<a href="lake-texoma.html">Lake Texoma</a>
-<a href="rates.html" aria-current="page">Rates</a>
-<a href="faqs.html">FAQs</a>
-<a href="contact.html">Contact</a>
+        <a href="lake-texoma.html">Lake Texoma</a>
+        <div class="nav-dropdown is-active">
+          <a href="rates.html" class="nav-dropdown-label">Rates</a>
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="rates-submenu" aria-label="Rates submenu">▾</button>
+          <div id="rates-submenu" class="nav-submenu">
+            <a href="rates.html">All Rates</a>
+            <a href="fishing-rates.html">Fishing Rates</a>
+            <a href="hunting-rates.html" aria-current="page">Hunting Rates</a>
+            <a href="corporate-rates.html">Corporate Rates</a>
+          </div>
+        </div>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -37,6 +44,15 @@
       <p>Oklahoma and Texas hunts available · Seven days a week</p>
     </div>
     <section class="section" style="padding-top:0;">
+      <div class="feature-pair">
+        <figure class="page-feature">
+          <img src="images/gallery/IMG_0316.jpg" alt="Duck hunt group with Four Seasons Guide Service" />
+        </figure>
+        <figure class="page-feature">
+          <img src="images/gallery/IMG_1572.jpg" alt="Guided dove hunt with a full trailer of birds" />
+        </figure>
+      </div>
+
       <div class="rate-grid">
         <article class="rate-card" id="duck">
           <h3>Duck Hunting — Day Hunts</h3>
@@ -58,27 +74,24 @@
       </div>
 
       <div class="prose" style="margin-top:2.5rem;max-width:46rem;">
-        <h2 style="font-family:var(--font-display);font-size:1.55rem;margin:0 0 0.75rem;">Dove hunts</h2>
         <p>
-          Dove hunting day hunts are <strong>$150 per gun</strong>. Oklahoma and Texas hunts are available,
-          seven days a week. We suggest a 2–3 day hunt, but a 1-day hunt is welcome. Family, friends, and
-          company outings are encouraged.
+          All hunting should be booked in advance. We suggest a 2–3 day hunt, but a 1-day hunt is welcome.
+          Family, friends, and company outings are welcomed. Parties of 4 to 8 are recommended; smaller
+          groups are welcome. For private hunts, a minimum of 4 is required.
         </p>
         <p>
-          Parties of 4 to 8 are recommended for hunting; smaller groups are welcome. For private hunts,
-          a minimum of 4 is required. Lodging can be arranged at a nearby hotel if needed.
+          A $100 deposit is required per day upon confirmation of booking. Balance of payment is due on
+          the day of the trip. Deposits are refundable with a request fourteen (14) days prior to the
+          scheduled booking, or may be transferred to an available date with a request five (5) days prior.
         </p>
+        <p>Lodging can be arranged at one of the nearby hotels if needed.</p>
+        <p>Call for company discounts. Catered fish frys and barbecue available.</p>
         <p>
-          A $100 deposit is required per day upon confirmation of booking. Balance is due on the day of
-          the trip. Deposits are refundable with fourteen (14) days’ notice, or may be transferred to an
-          available date with five (5) days’ notice.
+          Four Seasons Guide Service is a licensed and insured professional outfitter. Hunting trips are
+          not without inherent risk. We spare no effort for a safe trip, but cannot assume responsibility
+          for injuries beyond our control.
         </p>
-        <p>
-          Call for company discounts. Catered fish frys and barbecue are available. Four Seasons Guide
-          Service is a licensed and insured professional outfitter. Hunting trips have inherent risk — we
-          spare no effort for a safe trip, but cannot assume responsibility for injuries beyond our control.
-        </p>
-        <p class="note"><a href="contact.html">Book a dove hunt →</a> · <a href="faqs.html">What to bring →</a></p>
+        <p class="note"><a href="rates.html">All rates</a> · <a href="contact.html">Book now</a> · <a href="faqs.html">What to bring</a></p>
       </div>
     </section>
   </main>

@@ -10,48 +10,73 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  
 </head>
 <body>
-    <div class="top-banner">
+  <div class="top-banner">
     <a class="header-banner" href="index.html" aria-label="Four Seasons Guide Service home">
       <img src="images/brand/Four-Seasons-Banner-Lake-copy.png" alt="Four Seasons Guide Service — Lake Texoma striper fishing, Red River, trophy bluecats, and duck hunting" />
     </a>
   </div>
   <header class="site-header">
     <div class="nav-wrap">
-
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
-<a href="lake-texoma.html">Lake Texoma</a>
-<a href="rates.html" aria-current="page">Rates</a>
-<a href="faqs.html">FAQs</a>
-<a href="contact.html">Contact</a>
+        <a href="lake-texoma.html">Lake Texoma</a>
+        <div class="nav-dropdown is-active">
+          <a href="rates.html" class="nav-dropdown-label">Rates</a>
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="rates-submenu" aria-label="Rates submenu">▾</button>
+          <div id="rates-submenu" class="nav-submenu">
+            <a href="rates.html">All Rates</a>
+            <a href="fishing-rates.html">Fishing Rates</a>
+            <a href="hunting-rates.html">Hunting Rates</a>
+            <a href="corporate-rates.html" aria-current="page">Corporate Rates</a>
+          </div>
+        </div>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
   <main>
-    <div class="page-hero"><h1>Corporate Rates</h1><p>Unique trips for team-building, client entertainment, or a simple day outdoors.</p></div>
+    <div class="page-hero">
+      <h1>Corporate Rates</h1>
+      <p>A unique, affordable way to team-build, entertain clients, or simply relax.</p>
+    </div>
     <section class="section" style="padding-top:0;">
+      <div class="prose" style="max-width:46rem;margin-bottom:1.75rem;">
+        <p>
+          Looking for a unique and affordable way to team-build, entertain clients, or simply relax?
+          Let us take you on your next corporate fishing or hunting trip — specifically designed for
+          group entertainment.
+        </p>
+      </div>
+
       <div class="rate-grid">
         <article class="rate-card">
-          <h3>Fishing &amp; Hunting Packages</h3>
+          <h3>Corporate Fishing &amp; Hunting Packages</h3>
           <table class="rate-table">
             <tr><td>5 individuals · 5 trips</td><td>$3,750</td></tr>
             <tr><td>5 individuals · 10 trips</td><td>$7,500</td></tr>
           </table>
         </article>
         <article class="rate-card">
-          <h3>Fishing Only Packages</h3>
+          <h3>Corporate Fishing Only Packages</h3>
           <table class="rate-table">
             <tr><td>5 individuals · 5 trips</td><td>$3,250</td></tr>
             <tr><td>5 individuals · 10 trips</td><td>$6,000</td></tr>
           </table>
         </article>
       </div>
-      <div class="prose" style="margin-top:1.5rem;max-width:42rem;">
-        <p>Full payment is required in advance. Coupons are issued on receipt and must be used within one year. Call for larger package pricing and to reserve dates.</p>
+
+      <div class="prose" style="margin-top:2rem;max-width:46rem;">
+        <p><strong>For larger packages, call for pricing.</strong></p>
+        <p>
+          Full payment is required in advance and coupons will be issued upon receipt. Coupons must be
+          utilized within one year of the purchase date.
+        </p>
+        <p>Please call to reserve your company and client dates as soon as possible.</p>
+        <p class="note"><a href="rates.html">All rates</a> · <a href="contact.html">Reserve dates</a></p>
       </div>
     </section>
   </main>

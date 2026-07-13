@@ -22,12 +22,21 @@
     <div class="nav-wrap">
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
-<a href="lake-texoma.html">Lake Texoma</a>
-<a href="rates.html">Rates</a>
-<a href="faqs.html" aria-current="page">FAQs</a>
-<a href="contact.html">Contact</a>
+        <a href="lake-texoma.html">Lake Texoma</a>
+        <div class="nav-dropdown">
+          <a href="rates.html" class="nav-dropdown-label">Rates</a>
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="rates-submenu" aria-label="Rates submenu">▾</button>
+          <div id="rates-submenu" class="nav-submenu">
+            <a href="rates.html">All Rates</a>
+            <a href="fishing-rates.html">Fishing Rates</a>
+            <a href="hunting-rates.html">Hunting Rates</a>
+            <a href="corporate-rates.html">Corporate Rates</a>
+          </div>
+        </div>
+        <a href="faqs.html" aria-current="page">FAQs</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>

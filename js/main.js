@@ -1,9 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".site-nav");
-  if (!toggle || !nav) return;
-  toggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(open));
-  });
+  const dropdown = document.querySelector(".nav-dropdown");
+  const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
+      if (!open && dropdown) {
+        dropdown.classList.remove("is-open");
+        dropdownToggle?.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  if (dropdown && dropdownToggle) {
+    dropdownToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const open = dropdown.classList.toggle("is-open");
+      dropdownToggle.setAttribute("aria-expanded", String(open));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!dropdown.contains(event.target)) {
+        dropdown.classList.remove("is-open");
+        dropdownToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        dropdown.classList.remove("is-open");
+        dropdownToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 });
