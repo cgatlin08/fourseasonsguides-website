@@ -1,40 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".site-nav");
   const dropdown = document.querySelector(".nav-dropdown");
   const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(open));
-      if (!open && dropdown) {
-        dropdown.classList.remove("is-open");
-        dropdownToggle?.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
+  if (!dropdown || !dropdownToggle) return;
 
-  if (dropdown && dropdownToggle) {
-    dropdownToggle.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const open = dropdown.classList.toggle("is-open");
-      dropdownToggle.setAttribute("aria-expanded", String(open));
-    });
+  const isMobile = () => window.matchMedia("(max-width: 720px)").matches;
 
-    document.addEventListener("click", (event) => {
-      if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove("is-open");
-        dropdownToggle.setAttribute("aria-expanded", "false");
-      }
-    });
+  dropdownToggle.addEventListener("click", (event) => {
+    if (isMobile()) return;
+    event.preventDefault();
+    event.stopPropagation();
+    const open = dropdown.classList.toggle("is-open");
+    dropdownToggle.setAttribute("aria-expanded", String(open));
+  });
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        dropdown.classList.remove("is-open");
-        dropdownToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
+  document.addEventListener("click", (event) => {
+    if (isMobile()) return;
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("is-open");
+      dropdownToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      dropdown.classList.remove("is-open");
+      dropdownToggle.setAttribute("aria-expanded", "false");
+    }
+  });
 });
